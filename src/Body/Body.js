@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import { Calendar } from './';
 
+const Container = styled.div`
+  margin: 8px;
+`;
 const TodayDate = styled.div``;
 const CountdownDays = styled.div``;
 
@@ -18,13 +21,13 @@ const numberOfDaysTilChristmas = () => {
 };
 const Body = () => {
   return (
-    <div>
+    <Container>
       <TodayDate>Í dag er {getTodayDateString()}</TodayDate>
       <CountdownDays>
         og það eru {numberOfDaysTilChristmas()} dagar til jóla!
       </CountdownDays>
       <Calendar />
-    </div>
+    </Container>
   );
 };
 
