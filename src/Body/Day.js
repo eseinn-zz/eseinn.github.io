@@ -19,8 +19,8 @@ const Wrapper = styled.div`
   }
   flex: 0 0 10%;
   cursor: ${(props) => props.isToday && 'pointer'};
-
-  background: ${(props) => props.isToday && 'green'};
+  background: ${(props) => (props.isToday ? '#00B32C' : '#B3000C')};
+  backdrop-filter: blur(5px);
 `;
 const Number = styled.div`
   font-size: 14px;

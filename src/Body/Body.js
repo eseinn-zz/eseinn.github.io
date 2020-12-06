@@ -1,5 +1,25 @@
 import styled from 'styled-components';
 import { Calendar } from './';
+import BakgroundImage from '../img/background.jpg';
+
+const ImageContainer = styled.div`
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: ${(props) => `url(${props.src})`};
+  will-change: transform;
+  z-index: -1;
+  -webkit-background-size: cover;
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+`;
 
 const Container = styled.div`
   margin: 8px;
@@ -33,6 +53,7 @@ const Body = () => {
         og það eru {numberOfDaysTilChristmas()} dagar til jóla!
       </CountdownDays>
       <Calendar />
+      <ImageContainer src={BakgroundImage}></ImageContainer>
     </Container>
   );
 };
