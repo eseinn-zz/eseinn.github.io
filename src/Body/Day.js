@@ -1,5 +1,7 @@
-import styled from 'styled-components';
+import React from 'react';
 
+import styled from 'styled-components';
+import Exercise from './Exercise';
 const date = new Date();
 const today = date.getDate();
 
@@ -13,38 +15,46 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   justify-content: start;
-  @media only screen and (max-width: 950px) {
-    min-width: 75px;
-    height: 75px;
-  }
+
   flex: 0 0 10%;
-  cursor: ${(props) => props.isToday && 'pointer'};
+  cursor: ${(props) => props.isTodayHidden && 'pointer'};
   background: ${(props) => (props.isToday ? '#0b601c' : '#b31315')};
   backdrop-filter: blur(5px);
   border-radius: 8px;
+  opacity: 0.9;
 `;
+
 const Number = styled.div`
   font-size: 14px;
   position: absolute;
   font-weight: bold;
 `;
+
 const ContentWrapper = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  display: ${(props) => !props.isVisible && 'none'};
+  font-size: 12px;
+  overflow-wrap: anywhere;
 `;
-const ContentContainer = styled.div``;
 
 const Day = ({ day }) => {
+  const [isTodayVisible, setTodayVisibility] = React.useState(false);
+
   const isToday = day === today;
   return (
-    <Wrapper isToday={isToday}>
+    <Wrapper
+      isToday={isToday}
+      isTodayHidden={isToday && !isTodayVisible}
+      onClick={() => (isToday ? setTodayVisibility(true) : null)}
+    >
       <Number>{day}</Number>
-      <ContentWrapper isVisible={day < today}>
-        <ContentContainer>content</ContentContainer>
-      </ContentWrapper>
+      {(isTodayVisible || day < today) && (
+        <ContentWrapper>
+          <Exercise day={day} />
+        </ContentWrapper>
+      )}
     </Wrapper>
   );
 };

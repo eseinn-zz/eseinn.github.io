@@ -6,13 +6,15 @@ const Container = styled.div`
   bottom: 0px;
   width: 100%;
   margin-bottom: 8px;
+  font-size: 10px;
+  display: flex;
 `;
 const Item = styled.div``;
 
 const Footer = () => {
   return (
     <Container>
-      <Item>Footer</Item>
+      <Item></Item>
     </Container>
   );
 };
