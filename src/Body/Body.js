@@ -4,8 +4,14 @@ import { Calendar } from './';
 const Container = styled.div`
   margin: 8px;
 `;
-const TodayDate = styled.div``;
-const CountdownDays = styled.div``;
+const TodayDate = styled.div`
+  text-align: center;
+  font-size: 24px;
+`;
+const CountdownDays = styled.div`
+  text-align: center;
+  font-size: 24px;
+`;
 
 const today = new Date();
 const dayOfMonth = today.getDate();

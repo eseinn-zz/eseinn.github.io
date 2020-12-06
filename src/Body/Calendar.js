@@ -7,29 +7,19 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
-`;
-
-const Week = styled.div`
-  display: flex;
-  flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
 `;
 
 const renderDays = () => {
   let days = [];
-  const rows = [];
   const count = 25;
-  for (let day = 0; day < count; day++) {
+  for (let day = 1; day < count; day++) {
     days.push(<Day day={day} />);
-
-    if ((day + 1) % 7 === 0 || day === count - 1) {
-      rows.push(<Week>{days}</Week>);
-      days = [];
-    }
   }
 
-  return rows;
+  return days;
 };
 const Calendar = () => {
   return (
