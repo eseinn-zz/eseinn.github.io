@@ -1,3 +1,5 @@
+import './fonts/index.css';
+
 import styled from 'styled-components';
 import Header from './Header';
 import Body from './Body';
