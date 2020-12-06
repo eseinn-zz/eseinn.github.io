@@ -25,12 +25,18 @@ const Container = styled.div`
   margin: 8px;
 `;
 const TodayDate = styled.div`
+  margin-top: 16px;
   text-align: center;
   font-size: 24px;
+  color: #d5d3da;
+  font-weight: bold;
 `;
 const CountdownDays = styled.div`
   text-align: center;
   font-size: 24px;
+  margin-bottom: 16px;
+  color: #d5d3da;
+  font-weight: bold;
 `;
 
 const today = new Date();
