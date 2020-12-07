@@ -13,6 +13,7 @@ const getExerciseForDay = (day) => {
   let text = null;
   let link = null;
   let isLink = false;
+  console.log(day);
   switch (day) {
     case 1:
       text = '50 burpees (brjóta upp í viðráðanleg sett)';
@@ -117,8 +118,6 @@ const getExerciseForDay = (day) => {
 
     case 24:
       text = '20 burpees';
-      break;
-    default:
       break;
   }
   return [text, link, isLink];
