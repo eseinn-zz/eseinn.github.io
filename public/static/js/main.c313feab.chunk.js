@@ -236,9 +236,7 @@
             children: Object(r.jsx)(C, { children: E() }),
           });
         },
-        q =
-          t.p +
-          'https://eseinn.github.io/public/static/media/background.ea493d5d.jpg';
+        q = t.p + 'public/static/media/background.ea493d5d.jpg';
       function A() {
         var n = Object(u.a)([
           '\n  text-align: center;\n  font-size: 18px;\n  margin-bottom: 16px;\n  color: #d5d3da;\n  font-weight: bold;\n',
