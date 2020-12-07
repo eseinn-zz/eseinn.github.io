@@ -56,16 +56,17 @@ const Day = ({ day }) => {
   const [isTodayVisible, setTodayVisibility] = React.useState(false);
 
   const isToday = day === today;
+
   const dayHasPast = day < today;
   return (
     <Wrapper
       isToday={isToday}
       dayHasPast={dayHasPast}
       isTodayHidden={isToday && !isTodayVisible}
-      onClick={() => (isToday ? setTodayVisibility(true) : null)}
+      onClick={() => setTodayVisibility(true)}
     >
       <Number>{day}</Number>
-      {(isTodayVisible || dayHasPast) && (
+      {(isToday || dayHasPast) && (
         <ContentWrapper>
           <Exercise day={day} />
         </ContentWrapper>
