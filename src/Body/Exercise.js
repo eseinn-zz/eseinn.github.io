@@ -6,7 +6,6 @@ const Wrapper = styled.div`
 
 const renderContentForDay = (day) => {
   const [text, link, isLink] = getExerciseForDay(day);
-
   return isLink ? <a href={link}>{text ? text : link}</a> : text;
 };
 
