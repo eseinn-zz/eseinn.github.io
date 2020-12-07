@@ -6,7 +6,7 @@ const date = new Date();
 const today = date.getDate();
 
 const Wrapper = styled.div`
-  height: 100px;
+  min-height: 100px;
   border: 1px solid;
   display: flex;
   padding: 8px;
@@ -16,37 +16,39 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: start;
   flex: 0 0 10%;
-  cursor: ${(props) => props.isTodayHidden && 'pointer'};
+  cursor: ${(props) => (props.isTodayHidden ? 'pointer' : '')};
   background: ${(props) => (props.isToday ? '#0b601c' : '#b31315')};
   border-radius: 8px;
-  opacity: 0.9;
-  box-shadow: 0 0 40px 40px none inset, 0 0 0 0 none;
-  -webkit-transition: ${(props) => props.isToday && 'all 150ms ease-in-out'}
-  transition:  ${(props) => props.isToday && 'all 150ms ease-in-out;'}
+  opacity: 0.8;
+  box-shadow: '0 0 40px 40px none inset, 0 0 0 0 none';
+  transition: 'all 150ms ease-in-out';
   :hover {
+    opacity: 1;
     box-shadow: ${(props) =>
-      props.isToday && '0 0 10px 0 #0b601c inset, 0 0 10px 4px #0b601c'};
-    color: #d5d3da;
+      props.isToday
+        ? '0 0 10px 0 #0b601c inset, 0 0 10px 4px #0b601c'
+        : '0 0 10px 0 #b31315 inset, 0 0 10px 4px #b31315'};
     outline: 0;
   }
   :focus {
-    color: #d5d3da;
     outline: 0;
+  }
+  :hover > span {
+    color: #d5d3da;
   }
 `;
 
-const Number = styled.div`
-  font-size: 14px;
-  position: absolute;
+const Number = styled.span`
+  font-size: 18px;
   font-weight: bold;
 `;
 
 const ContentWrapper = styled.div`
+  color: unset;
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 12px;
+  font-size: 14px;
   overflow-wrap: anywhere;
 `;
 

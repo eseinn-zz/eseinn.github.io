@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  width: 100%;
+`;
 
 const renderContentForDay = (day) => {
   const [text, link, isLink] = getExerciseForDay(day);
@@ -116,6 +118,8 @@ const getExerciseForDay = (day) => {
 
     case 24:
       text = '20 burpees';
+      break;
+    default:
       break;
   }
   return [text, link, isLink];

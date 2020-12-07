@@ -5,6 +5,9 @@ const Heading = styled.h1`
   font-size: 40px;
   color: #d5d3da;
   font-weight: bold;
+  @media only screen and (max-width: 500px) {
+    font-size: 32px;
+  }
 `;
 const Header = () => {
   return <Heading>Jólaæfingadagatalið</Heading>;

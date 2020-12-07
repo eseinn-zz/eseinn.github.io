@@ -27,13 +27,13 @@ const Container = styled.div`
 const TodayDate = styled.div`
   margin-top: 16px;
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
   color: #d5d3da;
   font-weight: bold;
 `;
 const CountdownDays = styled.div`
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 16px;
   color: #d5d3da;
   font-weight: bold;
