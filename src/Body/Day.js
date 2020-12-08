@@ -44,7 +44,6 @@ const Number = styled.span`
 `;
 
 const ContentWrapper = styled.div`
-  color: unset;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -66,7 +65,7 @@ const Day = ({ day }) => {
       onClick={() => setTodayVisibility(true)}
     >
       <Number>{day}</Number>
-      {(isToday || dayHasPast) && (
+      {((isToday && isTodayVisible) || dayHasPast) && (
         <ContentWrapper>
           <Exercise day={day} />
         </ContentWrapper>
