@@ -64,43 +64,52 @@ const getExerciseForDay = (day) => {
       break;
 
     case 11:
-      text = '10 burpees';
+      link = 'https://www.youtube.com/watch?v=WsFMkXBJEvU';
+      isLink = true;
       break;
 
     case 12:
-      text = '20 burpees';
+      link = 'https://www.youtube.com/watch?v=BByHoF_sNEA';
+      isLink = true;
       break;
 
     case 13:
-      text = '10 burpees';
+      link = 'https://www.youtube.com/watch?v=FJJazKtH_9I';
+      text = 'Öndunaræfing';
+      isLink = true;
       break;
 
     case 14:
-      text = '20 burpees';
+      link = 'https://www.youtube.com/watch?v=jdFzYGmvDyg';
+      text =
+        '6 sett af dýfum, staðsetning á fótum þ.a. maður taki ekki fleiri en 10 reps í einu';
+      isLink = true;
       break;
 
     case 15:
-      text = '10 burpees';
+      text = 'https://wodwell.com/wod/homework-34';
       break;
 
     case 16:
-      text = '20 burpees';
       break;
 
     case 17:
-      text = '10 burpees';
       break;
 
     case 18:
-      text = '20 burpees';
+      text =
+        '7 sett þar sem haldið er í 40 sec, hvílt í 20 sec - nota hæfilega skölun eins og kemur fram í vídeóinu';
+      link = 'https://www.youtube.com/watch?v=2fB1R9uWQbw';
+      isLink = true;
       break;
 
     case 19:
-      text = '10 burpees';
+      text = 'Burpee próf: Hvað getur þú margar burpees á 10 mínútum?';
       break;
 
     case 20:
-      text = '20 burpees';
+      text =
+        'Hvíld! Nema þú eigir eftir að kaupa jólagjafir.. Drullaðu þér þá í Kringluna.';
       break;
 
     case 21:
@@ -117,6 +126,8 @@ const getExerciseForDay = (day) => {
 
     case 24:
       text = '20 burpees';
+      break;
+    default:
       break;
   }
   return [text, link, isLink];
