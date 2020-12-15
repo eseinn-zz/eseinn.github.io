@@ -87,13 +87,18 @@ const getExerciseForDay = (day) => {
       break;
 
     case 15:
-      text = 'https://wodwell.com/wod/homework-34';
+      link = 'https://wodwell.com/wod/homework-34';
+      isLink = true;
       break;
 
     case 16:
+      link = 'https://www.youtube.com/watch?v=erKJOb51bCI';
+      isLink = true;
       break;
 
     case 17:
+      link = 'https://www.youtube.com/watch?v=glXY7-W6D5w&t=439s';
+      isLink = true;
       break;
 
     case 18:
@@ -104,7 +109,8 @@ const getExerciseForDay = (day) => {
       break;
 
     case 19:
-      text = 'Burpee próf: Hvað getur þú margar burpees á 10 mínútum?';
+      text =
+        'Burpee próf: Hvað getur þú margar burpees á 10 mínútum? Hitaðu upp og teygðu áður en þú byrjar.';
       break;
 
     case 20:
@@ -113,19 +119,24 @@ const getExerciseForDay = (day) => {
       break;
 
     case 21:
-      text = '10 burpees';
+      text = 'Þetta verður eitthvað...';
+      link = 'https://wodwell.com/wod/12-days-christmas/';
+      isLink = true;
       break;
 
     case 22:
-      text = '20 burpees';
+      text =
+        'Rösklegur göngutúr eða létt skokk í hálftíma til að nýkja harðsperrur gærdagsins';
       break;
 
     case 23:
-      text = '20 burpees';
+      text =
+        'Wall squat próf: Hvað getur þú haldið lengi?  Hitaðu upp og teygðu áður en þú byrjar.';
       break;
 
     case 24:
-      text = '20 burpees';
+      text =
+        'Gleðileg jól kæru vinir. Veljið eina æfingu: 1: 100 armbeygjur. 2: 100 dýfur. 3: 100 burpees. 4: 100 uppsetur. 5: 10x100 m sprettir. ';
       break;
     default:
       break;
